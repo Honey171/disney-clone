@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import Details from './pages/Details';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Movies from './pages/Movies';
+import Search from './pages/Search';
+import Series from './pages/Series';
+import Sign from './pages/Sign';
+import Watch from './pages/Watch';
+import Watchlist from './pages/Watchlist';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={<Login />}
+      />
+      <Route
+        path="/home"
+        element={<Home />}
+      />
+      <Route
+        path="/detail/:id"
+        element={<Details />}
+      />
+      <Route
+        path="/movies"
+        element={<Movies />}
+      />
+      <Route
+        path="/series"
+        element={<Series />}
+      />
+      <Route
+        path="/sign"
+        element={<Sign />}
+      />
+      <Route
+        path="/watchlist"
+        element={<Watchlist />}
+      />
+      <Route
+        path="/search"
+        element={<Search />}
+      />
+      <Route
+        path="/watch/:id"
+        element={<Watch />}
+      />
+    </Routes>
   );
 }
 
