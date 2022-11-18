@@ -13,7 +13,7 @@ function Search() {
   useEffect(() => {
     searchingMovie();
     searchingSeries();
-  });
+  },[search]);
 
   const searchingMovie = async () => {
     const response = await fetch(
